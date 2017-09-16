@@ -12,7 +12,17 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var display: UILabel!
 
+    var userIsTyping: Bool = false
+    
     @IBAction func appendDigit(_ sender: UIButton) {
+        let digit = sender.currentTitle!
+        
+        if userIsTyping {
+            display.text = display.text! + digit
+        } else {
+            display.text = digit
+            userIsTyping = true
+        }
     }
 }
 
