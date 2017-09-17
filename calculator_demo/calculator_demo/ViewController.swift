@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var display: UILabel!
 
-    var userIsTyping: Bool = false
+    var userIsTyping = false
     
     @IBAction func appendDigit(_ sender: UIButton) {
         let digit = sender.currentTitle!
@@ -24,5 +24,26 @@ class ViewController: UIViewController {
             userIsTyping = true
         }
     }
+    
+    var operandStack = Array<Double>()
+    
+    @IBAction func enter() {
+        userIsTyping = false
+        operandStack.append(displayValue)
+        print(operandStack)
+    }
+    
+    var displayValue: Double {
+        get{
+            print("We are here")
+            return NumberFormatter().number(from: display.text!)!.doubleValue
+        }
+        set{
+            display.text = "\(newValue)"
+            userIsTyping = false
+            print("Enter")
+        }
+    }
 }
+
 
