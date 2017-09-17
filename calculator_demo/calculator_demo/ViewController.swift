@@ -35,13 +35,13 @@ class ViewController: UIViewController {
     
     var displayValue: Double {
         get{
-            print("We are here")
+            print("Enter inside get")
             return NumberFormatter().number(from: display.text!)!.doubleValue
         }
         set{
             display.text = "\(newValue)"
             userIsTyping = false
-            print("Enter")
+            print("Enter inside set")
         }
     }
 }
