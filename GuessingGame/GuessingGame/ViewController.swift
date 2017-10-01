@@ -10,6 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var userInput: UITextField!
+    @IBOutlet weak var resultText: UITextField!
+    
+    @IBAction func submitButton(_ sender: UIButton) {
+        let randomNum = String(arc4random_uniform(3))
+        
+        if userInput.text! == randomNum {
+            resultText.text = "You are correct!"
+        } else {
+            resultText.text = "Incorrect! The answer was " + randomNum + "."
+        }
+        
+    }
+    
+    
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
