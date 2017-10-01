@@ -10,11 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var display: UILabel!
-
-    var userIsTyping = false
+    @IBOutlet private weak var display: UILabel!
+    var model = CalculatorModel()
     
-    @IBAction func appendDigit(_ sender: UIButton) {
+    private var userIsTyping = false
+    
+    @IBAction private func appendDigit(_ sender: UIButton) {
         let digit = sender.currentTitle!
         
         if userIsTyping {
@@ -25,25 +26,29 @@ class ViewController: UIViewController {
         }
     }
     
-    var operandStack = Array<Double>()
-    
-    @IBAction func enter() {
-        userIsTyping = false
-        operandStack.append(displayValue)
-        print(operandStack)
+    @IBAction private func performOperation(_ sender: UIButton) {
+        if userIsTyping {
+            model.setOperand(operand: displayValue)
+            userIsTyping = false
+        }
+        
+        if let mathemathicalSymbol = sender.currentTitle {
+            model.performOperation(symbol: mathemathicalSymbol)
+        }
+        
+        displayValue = model.result
     }
     
-    var displayValue: Double {
+    private var displayValue: Double {
         get{
-            print("Enter inside get")
-            return NumberFormatter().number(from: display.text!)!.doubleValue
+            return Double(display.text!)!
         }
         set{
-            display.text = "\(newValue)"
+            display.text = String(newValue)
             userIsTyping = false
-            print("Enter inside set")
         }
     }
+    
 }
 
 

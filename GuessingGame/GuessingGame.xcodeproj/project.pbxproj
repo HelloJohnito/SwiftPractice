@@ -7,27 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AB04443F1F6DD97A00FCE71E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB04443E1F6DD97A00FCE71E /* AppDelegate.swift */; };
-		AB0444411F6DD97A00FCE71E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0444401F6DD97A00FCE71E /* ViewController.swift */; };
-		AB0444441F6DD97A00FCE71E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB0444421F6DD97A00FCE71E /* Main.storyboard */; };
-		AB0444461F6DD97A00FCE71E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB0444451F6DD97A00FCE71E /* Assets.xcassets */; };
-		AB0444491F6DD97A00FCE71E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB0444471F6DD97A00FCE71E /* LaunchScreen.storyboard */; };
-		AB0444511F78558000FCE71E /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0444501F78558000FCE71E /* model.swift */; };
+		AB0744DF1F817CDA00693AB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0744DE1F817CDA00693AB0 /* AppDelegate.swift */; };
+		AB0744E11F817CDA00693AB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0744E01F817CDA00693AB0 /* ViewController.swift */; };
+		AB0744E41F817CDA00693AB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB0744E21F817CDA00693AB0 /* Main.storyboard */; };
+		AB0744E61F817CDA00693AB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB0744E51F817CDA00693AB0 /* Assets.xcassets */; };
+		AB0744E91F817CDA00693AB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB0744E71F817CDA00693AB0 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AB04443B1F6DD97A00FCE71E /* calculator_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calculator_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB04443E1F6DD97A00FCE71E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AB0444401F6DD97A00FCE71E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AB0444431F6DD97A00FCE71E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AB0444451F6DD97A00FCE71E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AB0444481F6DD97A00FCE71E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AB04444A1F6DD97A00FCE71E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB0444501F78558000FCE71E /* model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
+		AB0744DB1F817CDA00693AB0 /* GuessingGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessingGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB0744DE1F817CDA00693AB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AB0744E01F817CDA00693AB0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AB0744E31F817CDA00693AB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AB0744E51F817CDA00693AB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AB0744E81F817CDA00693AB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AB0744EA1F817CDA00693AB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AB0444381F6DD97A00FCE71E /* Frameworks */ = {
+		AB0744D81F817CDA00693AB0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,74 +35,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AB0444321F6DD97A00FCE71E = {
+		AB0744D21F817CDA00693AB0 = {
 			isa = PBXGroup;
 			children = (
-				AB04443D1F6DD97A00FCE71E /* calculator_demo */,
-				AB04443C1F6DD97A00FCE71E /* Products */,
+				AB0744DD1F817CDA00693AB0 /* GuessingGame */,
+				AB0744DC1F817CDA00693AB0 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		AB04443C1F6DD97A00FCE71E /* Products */ = {
+		AB0744DC1F817CDA00693AB0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AB04443B1F6DD97A00FCE71E /* calculator_demo.app */,
+				AB0744DB1F817CDA00693AB0 /* GuessingGame.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AB04443D1F6DD97A00FCE71E /* calculator_demo */ = {
+		AB0744DD1F817CDA00693AB0 /* GuessingGame */ = {
 			isa = PBXGroup;
 			children = (
-				AB0444501F78558000FCE71E /* model.swift */,
-				AB04443E1F6DD97A00FCE71E /* AppDelegate.swift */,
-				AB0444401F6DD97A00FCE71E /* ViewController.swift */,
-				AB0444421F6DD97A00FCE71E /* Main.storyboard */,
-				AB0444451F6DD97A00FCE71E /* Assets.xcassets */,
-				AB0444471F6DD97A00FCE71E /* LaunchScreen.storyboard */,
-				AB04444A1F6DD97A00FCE71E /* Info.plist */,
+				AB0744DE1F817CDA00693AB0 /* AppDelegate.swift */,
+				AB0744E01F817CDA00693AB0 /* ViewController.swift */,
+				AB0744E21F817CDA00693AB0 /* Main.storyboard */,
+				AB0744E51F817CDA00693AB0 /* Assets.xcassets */,
+				AB0744E71F817CDA00693AB0 /* LaunchScreen.storyboard */,
+				AB0744EA1F817CDA00693AB0 /* Info.plist */,
 			);
-			path = calculator_demo;
+			path = GuessingGame;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AB04443A1F6DD97A00FCE71E /* calculator_demo */ = {
+		AB0744DA1F817CDA00693AB0 /* GuessingGame */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AB04444D1F6DD97A00FCE71E /* Build configuration list for PBXNativeTarget "calculator_demo" */;
+			buildConfigurationList = AB0744ED1F817CDA00693AB0 /* Build configuration list for PBXNativeTarget "GuessingGame" */;
 			buildPhases = (
-				AB0444371F6DD97A00FCE71E /* Sources */,
-				AB0444381F6DD97A00FCE71E /* Frameworks */,
-				AB0444391F6DD97A00FCE71E /* Resources */,
+				AB0744D71F817CDA00693AB0 /* Sources */,
+				AB0744D81F817CDA00693AB0 /* Frameworks */,
+				AB0744D91F817CDA00693AB0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = calculator_demo;
-			productName = calculator_demo;
-			productReference = AB04443B1F6DD97A00FCE71E /* calculator_demo.app */;
+			name = GuessingGame;
+			productName = GuessingGame;
+			productReference = AB0744DB1F817CDA00693AB0 /* GuessingGame.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AB0444331F6DD97A00FCE71E /* Project object */ = {
+		AB0744D31F817CDA00693AB0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Johnito;
 				TargetAttributes = {
-					AB04443A1F6DD97A00FCE71E = {
+					AB0744DA1F817CDA00693AB0 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = N3R5NNRND3;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = AB0444361F6DD97A00FCE71E /* Build configuration list for PBXProject "calculator_demo" */;
+			buildConfigurationList = AB0744D61F817CDA00693AB0 /* Build configuration list for PBXProject "GuessingGame" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -112,55 +109,54 @@
 				en,
 				Base,
 			);
-			mainGroup = AB0444321F6DD97A00FCE71E;
-			productRefGroup = AB04443C1F6DD97A00FCE71E /* Products */;
+			mainGroup = AB0744D21F817CDA00693AB0;
+			productRefGroup = AB0744DC1F817CDA00693AB0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AB04443A1F6DD97A00FCE71E /* calculator_demo */,
+				AB0744DA1F817CDA00693AB0 /* GuessingGame */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AB0444391F6DD97A00FCE71E /* Resources */ = {
+		AB0744D91F817CDA00693AB0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB0444491F6DD97A00FCE71E /* LaunchScreen.storyboard in Resources */,
-				AB0444461F6DD97A00FCE71E /* Assets.xcassets in Resources */,
-				AB0444441F6DD97A00FCE71E /* Main.storyboard in Resources */,
+				AB0744E91F817CDA00693AB0 /* LaunchScreen.storyboard in Resources */,
+				AB0744E61F817CDA00693AB0 /* Assets.xcassets in Resources */,
+				AB0744E41F817CDA00693AB0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		AB0444371F6DD97A00FCE71E /* Sources */ = {
+		AB0744D71F817CDA00693AB0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB0444411F6DD97A00FCE71E /* ViewController.swift in Sources */,
-				AB0444511F78558000FCE71E /* model.swift in Sources */,
-				AB04443F1F6DD97A00FCE71E /* AppDelegate.swift in Sources */,
+				AB0744E11F817CDA00693AB0 /* ViewController.swift in Sources */,
+				AB0744DF1F817CDA00693AB0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AB0444421F6DD97A00FCE71E /* Main.storyboard */ = {
+		AB0744E21F817CDA00693AB0 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AB0444431F6DD97A00FCE71E /* Base */,
+				AB0744E31F817CDA00693AB0 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		AB0444471F6DD97A00FCE71E /* LaunchScreen.storyboard */ = {
+		AB0744E71F817CDA00693AB0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AB0444481F6DD97A00FCE71E /* Base */,
+				AB0744E81F817CDA00693AB0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -168,7 +164,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		AB04444B1F6DD97A00FCE71E /* Debug */ = {
+		AB0744EB1F817CDA00693AB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -219,7 +215,7 @@
 			};
 			name = Debug;
 		};
-		AB04444C1F6DD97A00FCE71E /* Release */ = {
+		AB0744EC1F817CDA00693AB0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -263,27 +259,27 @@
 			};
 			name = Release;
 		};
-		AB04444E1F6DD97A00FCE71E /* Debug */ = {
+		AB0744EE1F817CDA00693AB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N3R5NNRND3;
-				INFOPLIST_FILE = calculator_demo/Info.plist;
+				INFOPLIST_FILE = GuessingGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.johnito.calculator-demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnito.GuessingGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		AB04444F1F6DD97A00FCE71E /* Release */ = {
+		AB0744EF1F817CDA00693AB0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N3R5NNRND3;
-				INFOPLIST_FILE = calculator_demo/Info.plist;
+				INFOPLIST_FILE = GuessingGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.johnito.calculator-demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnito.GuessingGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -292,25 +288,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AB0444361F6DD97A00FCE71E /* Build configuration list for PBXProject "calculator_demo" */ = {
+		AB0744D61F817CDA00693AB0 /* Build configuration list for PBXProject "GuessingGame" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AB04444B1F6DD97A00FCE71E /* Debug */,
-				AB04444C1F6DD97A00FCE71E /* Release */,
+				AB0744EB1F817CDA00693AB0 /* Debug */,
+				AB0744EC1F817CDA00693AB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AB04444D1F6DD97A00FCE71E /* Build configuration list for PBXNativeTarget "calculator_demo" */ = {
+		AB0744ED1F817CDA00693AB0 /* Build configuration list for PBXNativeTarget "GuessingGame" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AB04444E1F6DD97A00FCE71E /* Debug */,
-				AB04444F1F6DD97A00FCE71E /* Release */,
+				AB0744EE1F817CDA00693AB0 /* Debug */,
+				AB0744EF1F817CDA00693AB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = AB0444331F6DD97A00FCE71E /* Project object */;
+	rootObject = AB0744D31F817CDA00693AB0 /* Project object */;
 }
