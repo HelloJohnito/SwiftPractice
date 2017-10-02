@@ -16,10 +16,13 @@ class ViewController: UIViewController {
     @IBAction func submitButton(_ sender: UIButton) {
         let randomNum = String(arc4random_uniform(3))
         
-        if userInput.text! == randomNum {
-            resultText.text = "You are correct!"
-        } else {
-            resultText.text = "Incorrect! The answer was " + randomNum + "."
+        if let userEnteredString = userInput.text {
+            
+            if userEnteredString == randomNum {
+                resultText.text = "You are correct!"
+            } else {
+                resultText.text = "Incorrect! The answer was " + randomNum + "."
+            }
         }
         
     }

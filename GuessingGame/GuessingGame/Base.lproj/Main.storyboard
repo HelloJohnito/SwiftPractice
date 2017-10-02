@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,40 +19,57 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Guess a Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="up0-0f-qS4">
-                                <rect key="frame" x="16" y="102" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. 1,4 or 6" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="szb-gD-VIO">
+                                <rect key="frame" x="20" y="156" width="374" height="30"/>
                                 <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yh-Sa-MyI">
-                                <rect key="frame" x="163" y="220" width="49" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yh-Sa-MyI">
+                                <rect key="frame" x="183" y="216" width="49" height="30"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="submitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OjF-Zx-uXf"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QSl-5q-OOD">
-                                <rect key="frame" x="16" y="311" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" red="0.36962267691234751" green="0.35746811940083045" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="szb-gD-VIO">
-                                <rect key="frame" x="139" y="159" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess a Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="up0-0f-qS4">
+                                <rect key="frame" x="143" y="102" width="128" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QSl-5q-OOD">
+                                <rect key="frame" x="36" y="301" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="L2c-U6-fyJ"/>
+                                    <constraint firstAttribute="height" constant="30" id="heO-4h-xiS"/>
+                                </constraints>
+                                <color key="textColor" red="0.36962267691234751" green="0.35746811940083045" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="up0-0f-qS4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Fl-t4-LhB"/>
+                            <constraint firstItem="szb-gD-VIO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="8Jy-Gt-13v"/>
+                            <constraint firstItem="szb-gD-VIO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BZi-8N-Am9"/>
+                            <constraint firstItem="QSl-5q-OOD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F4c-1w-ftQ"/>
+                            <constraint firstItem="szb-gD-VIO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JQl-R8-9Dx"/>
+                            <constraint firstItem="szb-gD-VIO" firstAttribute="top" secondItem="up0-0f-qS4" secondAttribute="bottom" constant="33" id="OuU-Bx-D89"/>
+                            <constraint firstItem="4yh-Sa-MyI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Us9-ma-9IR"/>
+                            <constraint firstItem="4yh-Sa-MyI" firstAttribute="top" secondItem="szb-gD-VIO" secondAttribute="bottom" constant="30" id="V1d-gV-Hsl"/>
+                            <constraint firstItem="QSl-5q-OOD" firstAttribute="top" secondItem="4yh-Sa-MyI" secondAttribute="bottom" constant="55" id="Vwf-un-2x6"/>
+                            <constraint firstItem="up0-0f-qS4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="82" id="WT9-fd-weE"/>
+                            <constraint firstItem="4yh-Sa-MyI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YwD-GR-E9S"/>
+                            <constraint firstItem="szb-gD-VIO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hhi-0S-3Qz"/>
+                            <constraint firstItem="up0-0f-qS4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n5J-7F-cwg"/>
+                            <constraint firstItem="szb-gD-VIO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="sxq-lL-m1e"/>
+                            <constraint firstItem="szb-gD-VIO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y0k-if-d0Y"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="resultText" destination="QSl-5q-OOD" id="d4I-et-Q1I"/>
@@ -60,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="85.599999999999994" y="136.28185907046478"/>
+            <point key="canvasLocation" x="85.507246376811594" y="136.14130434782609"/>
         </scene>
     </scenes>
 </document>
