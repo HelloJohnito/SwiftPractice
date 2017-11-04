@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     
     var timer = Timer()
     
+    var time = 210
+    
     @IBOutlet weak var displayTime: UILabel!
     
     
@@ -24,37 +26,36 @@ class ViewController: UIViewController {
     }
     
     @IBAction func subtractTenMin(_ sender: Any) {
-        let time = Int(displayTime.text!)!
+//        let time = Int(displayTime.text!)!
         
         if time > 10 {
-            displayTime.text = String(time - 10)
-        }
-        else {
-            displayTime.text = "0"
+            time -= 10
+            displayTime.text = String(time)
         }
         
     }
     
     @IBAction func addTenMin(_ sender: Any) {
-        let time = Int(displayTime.text!)!
-        displayTime.text = String(time + 10)
+        time += 10
+        displayTime.text = String(time)
     }
     
     @IBAction func resetPressed(_ sender: Any) {
         self.pausePressed("")
-        displayTime.text = "210"
+        time = 210
+        displayTime.text = String(time)
         self.playPressed("")
     }
     
     
     func processTimer() {
-        let time = Int(displayTime.text!)!
         
         if time == 0 {
             timer.invalidate()
         }
         else{
-            displayTime.text = String(time - 1)
+            time-=1
+            displayTime.text = String(time)
         }
     }
 
@@ -62,7 +63,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(processTimer), userInfo: nil, repeats: true)
+//        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(processTimer), userInfo: nil, repeats: true)
     }
 
     override func didReceiveMemoryWarning() {
