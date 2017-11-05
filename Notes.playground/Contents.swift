@@ -154,5 +154,37 @@ if var age = enteredNumberToInteger {
 
 
 
+var str = "Hello"
+var newString = str + " John"
 
+// loop strings 
+
+
+//for character in newString.characters {
+//    print(character)
+//}
+//
+
+let newTypeString = NSString(string: newString)
+newTypeString.substring(to: 5)
+    // first 5
+newTypeString.substring(from: 4)
+    // start at the fifth character
+    // returns a string
+
+NSString(newTypeString.substring(from: 6)).substring(to:3)
+newTypeString.substring(with: NSRange(location: 6, length: 3))
+
+// Check if the string contains a word
+if newTypeString.contains("John") {
+    print(true)
+}
+
+
+// split 
+newTypeString.components(separatedBy: " ")
+// returns an array 
+
+newTypeString.uppercased
+newTypeString.lowercased
 
