@@ -8,7 +8,12 @@
 
 import UIKit
 
+// Important on main story, control click the table to the yellow dot and add in datasource and delegate. This creates the outlets. They are inherited in this class. 
+// prototype to 1
+// select the cell and add an identifier name
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     
     var friends = ["John", "Aaron", "Tyler"]
     
