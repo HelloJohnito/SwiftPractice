@@ -11,6 +11,7 @@ import MapKit
 import CoreLocation
 
 class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+    // add to plist keys
     
     // location
     var locationManager = CLLocationManager()
