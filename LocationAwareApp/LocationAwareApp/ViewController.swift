@@ -40,14 +40,45 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let userLocation: CLLocation = locations[0]
 
-        // taking the location of the user and 
+        // taking the location of the user and extracting the address.
         CLGeocoder().reverseGeocodeLocation(userLocation) { (placemarks, error) in
             if error != nil {
                 print(error)
             }
             else {
                 if let placemark = placemarks?[0] {
-                    print(placemark)
+                    
+                    var subThoroughFare = ""
+                    if placemark.subThoroughfare != nil {
+                        subThoroughFare = placemark.subThoroughfare!
+                    }
+                    
+                    var thoroughfare = ""
+                    if placemark.thoroughfare != nil {
+                        thoroughfare = placemark.thoroughfare!
+                    }
+                    
+                    var subLocality = ""
+                    if placemark.subLocality != nil {
+                        subLocality = placemark.subLocality!
+                    }
+                    
+                    var subAdministrativeArea = ""
+                    if placemark.subAdministrativeArea != nil {
+                        subAdministrativeArea = placemark.subAdministrativeArea!
+                    }
+                    
+                    var postalCode = ""
+                    if placemark.postalCode != nil {
+                        postalCode = placemark.postalCode!
+                    }
+                    
+                    var country = ""
+                    if placemark.country != nil {
+                        country = placemark.country!
+                    }
+                    
+                    print(subThoroughFare + " " + thoroughfare + "\n" + subLocality + "\n" + subAdministrativeArea + "\n" + postalCode + "\n" + country)
                 }
             }
         }
