@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Places-->
         <scene sceneID="yRD-23-4zI">
             <objects>
-                <tableViewController id="LXq-bL-8L9" sceneMemberID="viewController">
+                <tableViewController id="LXq-bL-8L9" customClass="PlacesViewController" customModule="MemoryPlace" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Zf3-rP-lqr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,10 +32,10 @@
                             <outlet property="delegate" destination="LXq-bL-8L9" id="tNt-yb-QM6"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="CDS-me-yGn">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="T0Y-6n-Atf">
+                    <navigationItem key="navigationItem" title="Places" id="CDS-me-yGn">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="T0Y-6n-Atf">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="c3e-aw-hSq"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="PlaceToMap" id="c3e-aw-hSq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -60,10 +60,10 @@
             </objects>
             <point key="canvasLocation" x="-1142" y="152"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Map-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Map View Controller" id="BYZ-38-t0r" customClass="ViewController" customModule="MemoryPlace" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Map" id="BYZ-38-t0r" customClass="ViewController" customModule="MemoryPlace" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
