@@ -8,10 +8,26 @@
 
 import UIKit
 
+// Holds our information
+var places = [Dictionary<String, String>()]
+var activePlace = -1
+
 class PlacesViewController: UITableViewController {
+    
+    @IBOutlet var table: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // if places is empty, fill with a sample place.
+        if places.count == 1 && places[0].count == 0 {
+            places.remove(at: 0)
+            places.append(["name": "Taj Mahal", "lat": "27.176277", "long": "78.042128"])
+        }
+        
+        activePlace = -1
+        table.reloadData() // add data to table
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -19,28 +35,33 @@ class PlacesViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
+    // Number of rows
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return places.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
-        cell.textLabel?.text = "Row \(indexPath.row)"
+
+        if places[indexPath.row]["name"] != nil {
+            cell.textLabel?.text = places[indexPath.row]["name"]
+        }
 
         return cell
     }
     
+    
     // Segue for when the row is clicked
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        activePlace = indexPath.row
         performSegue(withIdentifier: "PlaceToMap", sender: nil)
     }
 

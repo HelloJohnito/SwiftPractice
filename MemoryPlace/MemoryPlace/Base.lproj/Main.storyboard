@@ -39,6 +39,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="table" destination="Zf3-rP-lqr" id="PVv-Co-CGm"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GLL-U5-mn6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -71,12 +74,29 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="EFZ-dq-nLV">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="iXX-bQ-mTk"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EFZ-dq-nLV" secondAttribute="bottom" id="17F-59-h1y"/>
+                            <constraint firstItem="EFZ-dq-nLV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="C1F-tJ-pYd"/>
+                            <constraint firstAttribute="trailing" secondItem="EFZ-dq-nLV" secondAttribute="trailing" id="Fbd-hb-bCT"/>
+                            <constraint firstItem="EFZ-dq-nLV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rXB-Rv-Z8t"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="map" destination="EFZ-dq-nLV" id="kf4-a0-9eZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="447" y="152"/>
+            <point key="canvasLocation" x="445.60000000000002" y="151.57421289355324"/>
         </scene>
     </scenes>
 </document>
