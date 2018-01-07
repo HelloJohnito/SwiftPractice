@@ -19,6 +19,10 @@ class PlacesViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+
+    // ViewDidLoad does not run when back button is pressed, but ViewDidAppear does
+    override func viewDidAppear(_ animated: Bool) {
         // if places is empty, fill with a sample place.
         if places.count == 1 && places[0].count == 0 {
             places.remove(at: 0)
@@ -27,9 +31,9 @@ class PlacesViewController: UITableViewController {
         
         activePlace = -1
         table.reloadData() // add data to table
-        
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
