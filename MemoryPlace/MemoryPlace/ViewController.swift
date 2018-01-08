@@ -112,6 +112,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
                 
                 // add to places array
                 places.append(["name": title, "lat": String(newCoordinate.latitude), "long": String(newCoordinate.longitude)])
+                
+                // UserDefaults.standard().set(places, forKey: "places")
             })
             
         } else if (gestureRecognizer.state == UIGestureRecognizerState.ended) {

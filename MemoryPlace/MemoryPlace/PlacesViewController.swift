@@ -12,6 +12,7 @@ import UIKit
 var places = [Dictionary<String, String>()]
 var activePlace = -1
 
+
 class PlacesViewController: UITableViewController {
     
     @IBOutlet var table: UITableView!
@@ -23,10 +24,23 @@ class PlacesViewController: UITableViewController {
 
     // ViewDidLoad does not run when back button is pressed, but ViewDidAppear does
     override func viewDidAppear(_ animated: Bool) {
+        
+        // store into permanent storage
+        /*
+        if let tempPlaces = UserDefaults.standard.object(forKey: "places") as? [Dictionary<String, String>] {
+            
+            places = tempPlaces
+        }
+        */
+        
+        
         // if places is empty, fill with a sample place.
         if places.count == 1 && places[0].count == 0 {
             places.remove(at: 0)
             places.append(["name": "Taj Mahal", "lat": "27.176277", "long": "78.042128"])
+            
+            // Set places to permanent storage
+                // UserDefaults.standard().set(places, forKey: "places")
         }
         
         activePlace = -1
@@ -43,6 +57,7 @@ class PlacesViewController: UITableViewController {
         
         if editingStyle == UITableViewCellEditingStyle.delete {
             places.remove(at: indexPath.row)
+            // UserDefaults.standard().set(places, forKey: "places")
             table.reloadData()
         }
     }
