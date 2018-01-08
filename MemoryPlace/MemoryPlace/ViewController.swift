@@ -8,11 +8,15 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class ViewController: UIViewController, MKMapViewDelegate {
+class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
  
     @IBOutlet weak var map: MKMapView!
         // set up the delegates
+    
+    //For user location
+    var manager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,10 +26,20 @@ class ViewController: UIViewController, MKMapViewDelegate {
         uiLongPress.minimumPressDuration = 2
         map.addGestureRecognizer(uiLongPress)
         
-        // Display map with details 
+        // Display map with details
         if activePlace == -1 {
             // when user presses the add button
             
+            // get users location 
+                // Add "CoreLocation" Framework
+                // info.plist
+                    // privcy location always 
+                    // privacy location when in use
+            
+            manager.delegate = self
+            manager.desiredAccuracy = kCLLocationAccuracyBest
+            manager.requestWhenInUseAuthorization()
+            manager.startUpdatingLocation()
             
         } else {
             // when user presses an item
@@ -98,14 +112,22 @@ class ViewController: UIViewController, MKMapViewDelegate {
                 
                 // add to places array
                 places.append(["name": title, "lat": String(newCoordinate.latitude), "long": String(newCoordinate.longitude)])
-                
-                print(places)
-            
             })
             
         } else if (gestureRecognizer.state == UIGestureRecognizerState.ended) {
             print("Long press Ended.");
         }
+    }
+    
+    
+    // runs as user's location updates
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = CLLocationCoordinate2D(latitude: locations[0].coordinate.latitude, longitude: locations[0].coordinate.longitude)
+        
+        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let region = MKCoordinateRegion(center: location, span: span)
+        
+        self.map.setRegion(region, animated: true)
     }
 
     

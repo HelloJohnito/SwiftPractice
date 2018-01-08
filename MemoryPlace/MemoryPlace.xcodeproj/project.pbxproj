@@ -13,6 +13,7 @@
 		AB06A7B02002CD1000B5E6A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB06A7AF2002CD1000B5E6A0 /* Assets.xcassets */; };
 		AB06A7B32002CD1000B5E6A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB06A7B12002CD1000B5E6A0 /* LaunchScreen.storyboard */; };
 		AB06A7BB2002CF7F00B5E6A0 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB06A7BA2002CF7F00B5E6A0 /* PlacesViewController.swift */; };
+		AB06A7BE2002E90E00B5E6A0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB06A7BD2002E90E00B5E6A0 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		AB06A7B22002CD1000B5E6A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB06A7B42002CD1000B5E6A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB06A7BA2002CF7F00B5E6A0 /* PlacesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
+		AB06A7BD2002E90E00B5E6A0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB06A7BE2002E90E00B5E6A0 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +45,7 @@
 			children = (
 				AB06A7A72002CD1000B5E6A0 /* MemoryPlace */,
 				AB06A7A62002CD1000B5E6A0 /* Products */,
+				AB06A7BC2002E90E00B5E6A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +69,14 @@
 				AB06A7B42002CD1000B5E6A0 /* Info.plist */,
 			);
 			path = MemoryPlace;
+			sourceTree = "<group>";
+		};
+		AB06A7BC2002E90E00B5E6A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB06A7BD2002E90E00B5E6A0 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
